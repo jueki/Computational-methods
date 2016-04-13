@@ -1,0 +1,44 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[       903,         36]
+NotebookOptionsPosition[       661,         23]
+NotebookOutlinePosition[      1008,         38]
+CellTagsIndexPosition[       965,         35]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Sandpile Model", "Title",
+ CellChangeTimes->{{3.6695747307340837`*^9, 3.669574737850984*^9}}]
+},
+WindowSize->{759, 601},
+WindowMargins->{{Automatic, 295}, {24, Automatic}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (February 25, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 99, 1, 101, "Title"]
+}
+]
+*)
+
