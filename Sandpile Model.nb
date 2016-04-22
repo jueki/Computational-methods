@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    335496,       5656]
-NotebookOptionsPosition[    334643,       5622]
-NotebookOutlinePosition[    335021,       5638]
-CellTagsIndexPosition[    334978,       5635]
+NotebookDataLength[    336197,       5671]
+NotebookOptionsPosition[    335261,       5634]
+NotebookOutlinePosition[    335639,       5650]
+CellTagsIndexPosition[    335596,       5647]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -40,6 +40,8 @@ Cell[BoxData[{
    "How", " ", "many", " ", "steps", " ", "to", " ", "wait", " ", "before", 
     " ", "adding", " ", "more", " ", "sand"}], " ", 
    "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"critHeight", " ", "=", " ", "4"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"addSand", "[", 
    RowBox[{"place_:", 
@@ -87,7 +89,8 @@ Cell[BoxData[{
    3.6702070654095435`*^9}, {3.6702073107343826`*^9, 3.670207316806773*^9}, {
    3.670208390367284*^9, 3.670208394278058*^9}, {3.6702089985026712`*^9, 
    3.670209004866353*^9}, {3.6702859740925617`*^9, 3.6702859886186266`*^9}, 
-   3.670287023278055*^9, 3.6702871403086767`*^9}]
+   3.670287023278055*^9, 3.6702871403086767`*^9, {3.6702877382812357`*^9, 
+   3.670287740899297*^9}, {3.670288056467272*^9, 3.67028807183197*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -139,7 +142,8 @@ Cell[BoxData[
                RowBox[{"grid", "[", 
                 RowBox[{"[", 
                  RowBox[{"i", ",", "j"}], "]"}], "]"}], " ", 
-               "\[GreaterEqual]", " ", "4"}], ",", "\[IndentingNewLine]", 
+               "\[GreaterEqual]", " ", "critHeight"}], ",", 
+              "\[IndentingNewLine]", 
               RowBox[{
                RowBox[{
                 RowBox[{"grid", "[", 
@@ -207,7 +211,7 @@ Cell[BoxData[
    3.670209151622178*^9}, {3.6702091988849597`*^9, 3.670209332481083*^9}, {
    3.6702093797615967`*^9, 3.670209392612152*^9}, {3.670214225425387*^9, 
    3.6702142269904795`*^9}, 3.6702859504602094`*^9, {3.670286304576234*^9, 
-   3.6702863051924686`*^9}}],
+   3.6702863051924686`*^9}, {3.6702880741333466`*^9, 3.6702880757669983`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -235,7 +239,13 @@ Cell[BoxData[
     "]"}]}]], "Input",
  CellChangeTimes->{{3.6702861272240305`*^9, 3.670286131658803*^9}, {
   3.6702862922282906`*^9, 3.6702862924211874`*^9}, {3.6702867480730295`*^9, 
-  3.6702867481354823`*^9}, {3.670286903490368*^9, 3.6702869075234847`*^9}}],
+  3.6702867481354823`*^9}, {3.670286903490368*^9, 3.6702869075234847`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Run and Plot the Simulation", "Subsubsection",
+ CellChangeTimes->{{3.67028830224984*^9, 3.6702883061856146`*^9}}],
 
 Cell[BoxData[
  RowBox[{"pourSand", "[", "1000", "]"}]], "Input",
@@ -251,7 +261,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.6702869552154093`*^9, 3.6702869604373145`*^9}, {
    3.6702870040789757`*^9, 3.6702870116285143`*^9}, {3.67028717519384*^9, 
    3.6702871763940783`*^9}, {3.6702872638648043`*^9, 3.6702872671292067`*^9}, 
-   3.670287311325121*^9}],
+   3.670287311325121*^9, {3.6702885120817785`*^9, 3.6702885317573233`*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[GraphicsComplex3DBox[CompressedData["
@@ -5601,7 +5611,8 @@ NuNrSkbPAtx28E4fq/UIwxN0naRjKoHn9fBfyXN7/umv52rzfizxszXfk/UP
   BoxRatios->{1, 1, 0.4},
   DisplayFunction->Identity,
   FaceGridsStyle->Automatic,
-  ImageSize->{-NaN, -NaN},
+  ImageSize->{355.54617274627316`, 231.8350742231289},
+  ImageSizeRaw->Automatic,
   Method->{"DefaultBoundaryStyle" -> Directive[
       GrayLevel[0.3]], "RotationControl" -> "Globe"},
   PlotRange->{{1., 100.}, {1., 100.}, {0., 3.}},
@@ -5610,19 +5621,20 @@ NuNrSkbPAtx28E4fq/UIwxN0naRjKoHn9fBfyXN7/umv52rzfizxszXfk/UP
     Scaled[0.02], 
     Scaled[0.02]},
   Ticks->{Automatic, Automatic, Automatic},
-  ViewPoint->{NaN, NaN, NaN},
+  ViewPoint->{0.43968621972909083`, -3.1637405292298912`, 1.1168804286442418`},
   ViewVertical->{0., 0., 1.}]], "Output",
  CellChangeTimes->{{3.670286962639374*^9, 3.670286973364368*^9}, {
    3.6702870086453114`*^9, 3.6702870201211863`*^9}, 3.67028705946395*^9, 
    3.6702871177784605`*^9, 3.670287177078822*^9, 3.67028727199193*^9, {
-   3.6702873040233917`*^9, 3.6702873119885807`*^9}}]
-}, Closed]]
+   3.6702873040233917`*^9, 3.6702873119885807`*^9}, {3.670288492717962*^9, 
+   3.67028853243419*^9}}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1366, 685},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
-Magnification:>0.65 Inherited,
+Magnification:>1.15 Inherited,
 FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (February 25, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -5638,24 +5650,27 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 99, 1, 64, "Title"],
+Cell[580, 22, 99, 1, 117, "Title"],
 Cell[CellGroupData[{
-Cell[704, 27, 167, 2, 25, "Subsubsection"],
-Cell[874, 31, 2318, 58, 147, "Input"]
+Cell[704, 27, 167, 2, 46, "Subsubsection"],
+Cell[874, 31, 2502, 61, 255, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3229, 94, 103, 1, 25, "Subsubsection"],
-Cell[3335, 97, 344, 10, 21, "Input"]
+Cell[3413, 97, 103, 1, 44, "Subsubsection"],
+Cell[3519, 100, 344, 10, 34, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3716, 112, 135, 1, 25, "Subsubsection"],
-Cell[3854, 115, 4296, 94, 238, "Input"],
-Cell[8153, 211, 1198, 26, 119, "Input"],
-Cell[9354, 239, 336, 5, 21, "Input"],
+Cell[3900, 115, 135, 1, 46, "Subsubsection"],
+Cell[4038, 118, 4370, 95, 365, "Input"],
+Cell[8411, 215, 1198, 26, 189, "Input"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[9715, 248, 317, 5, 21, "Input"],
-Cell[10035, 255, 324568, 5362, 45, "Output"]
-}, Closed]]
+Cell[9646, 246, 119, 1, 44, "Subsubsection"],
+Cell[9768, 249, 336, 5, 34, "Input"],
+Cell[CellGroupData[{
+Cell[10129, 258, 367, 5, 34, "Input"],
+Cell[10499, 265, 324722, 5364, 317, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
