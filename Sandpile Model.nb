@@ -10,16 +10,19 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     41471,       1016]
-NotebookOptionsPosition[     39381,        942]
-NotebookOutlinePosition[     39726,        957]
-CellTagsIndexPosition[     39683,        954]
+NotebookDataLength[     47515,       1179]
+NotebookOptionsPosition[     45098,       1096]
+NotebookOutlinePosition[     45452,       1112]
+CellTagsIndexPosition[     45409,       1109]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData["\n"], "Input",
+ CellChangeTimes->{3.670804999468638*^9}],
 
 Cell[CellGroupData[{
+
 Cell["The Sandpile Model", "Title",
  CellChangeTimes->{{3.6695747307340837`*^9, 3.669574737850984*^9}, {
   3.6706362222747707`*^9, 3.670636222728366*^9}, {3.670646261722624*^9, 
@@ -268,7 +271,8 @@ Cell[BoxData[
    3.670640198418159*^9}, {3.670640349920541*^9, 3.670640376551675*^9}, {
    3.670640769476622*^9, 3.6706407736522083`*^9}, {3.6706427740177193`*^9, 
    3.670642833363367*^9}, {3.670644471224394*^9, 3.67064448263144*^9}, 
-   3.6706445397687817`*^9, {3.670645177590901*^9, 3.6706451779094973`*^9}}],
+   3.6706445397687817`*^9, {3.670645177590901*^9, 3.6706451779094973`*^9}, 
+   3.670806604461862*^9}],
 
 Cell[CellGroupData[{
 
@@ -348,17 +352,17 @@ Cell[BoxData[
   TagBox[
    FormBox[
     StyleBox[
-     DynamicModuleBox[{$CellContext`t$$ = 850, Typeset`show$$ = True, 
+     DynamicModuleBox[{$CellContext`t$$ = 155, Typeset`show$$ = True, 
       Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
       Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
       "\"untitled\"", Typeset`specs$$ = {{
         Hold[$CellContext`t$$], 1, 1000, 1}}, Typeset`size$$ = {
-      227., {213., 219.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-      Typeset`skipInitDone$$ = True, $CellContext`t$2006091$$ = 0}, 
+      360., {210., 214.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`t$159426$$ = 0}, 
       DynamicBox[Manipulate`ManipulateBoxes[
        1, TraditionalForm, "Variables" :> {$CellContext`t$$ = 1}, 
         "ControllerVariables" :> {
-          Hold[$CellContext`t$$, $CellContext`t$2006091$$, 0]}, 
+          Hold[$CellContext`t$$, $CellContext`t$159426$$, 0]}, 
         "OtherVariables" :> {
          Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
           Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -389,7 +393,7 @@ Cell[BoxData[
           DefaultBaseStyle -> "Animate", DefaultLabelStyle -> "AnimateLabel", 
           SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
         "DefaultOptions" :> {}],
-       ImageSizeCache->{393., {251., 258.}},
+       ImageSizeCache->{405., {246., 253.}},
        SingleEvaluation->True],
       Deinitialization:>None,
       DynamicModuleValues:>{},
@@ -412,7 +416,7 @@ Cell[BoxData[
    3.67064535793937*^9}, 3.670645461122727*^9, {3.670646823040165*^9, 
    3.6706468521312447`*^9}, {3.670647078136504*^9, 3.670647085658746*^9}, {
    3.670647306684074*^9, 3.6706473197316236`*^9}, {3.670650329632782*^9, 
-   3.670650382970113*^9}, 3.670650455293717*^9}]
+   3.670650382970113*^9}, 3.670650455293717*^9, 3.670806607392416*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -463,6 +467,7 @@ Cell[BoxData[{
        RowBox[{"(*", 
         RowBox[{
          RowBox[{"If", " ", "we", " ", "activate", " ", "random"}], ",", " ", 
+         
          RowBox[{"then", " ", "add", " ", "grains", " ", "randomly"}]}], 
         "*)"}], "\[IndentingNewLine]", 
        RowBox[{"addGrainRandom", "[", "]"}], ",", "\[IndentingNewLine]", 
@@ -533,7 +538,11 @@ Cell[BoxData[
  CellChangeTimes->{{3.670651937473474*^9, 3.670652056859351*^9}}],
 
 Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.670651935330867*^9, 3.670651936275573*^9}}]
+ CellChangeTimes->{{3.670651935330867*^9, 3.670651936275573*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.670805080161933*^9, 3.670805111875999*^9}, {
+  3.670805276250597*^9, 3.6708055247408133`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -543,17 +552,75 @@ Cell["Reset Button", "Subsubsection",
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"grid", " ", "=", " ", 
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"Table", "[", 
-      RowBox[{"0", ",", " ", 
-       RowBox[{"{", 
-        RowBox[{"n", ",", " ", "gridsize"}], "}"}]}], "]"}], ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"n", ",", " ", "gridsize"}], "}"}]}], "]"}]}], ";"}]], "Input",
+  RowBox[{
+   RowBox[{"reset", "[", "]"}], ":=", 
+   RowBox[{"grid", " ", "=", " ", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{"0", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", " ", "gridsize"}], "}"}]}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", " ", "gridsize"}], "}"}]}], "]"}]}]}], 
+  ";"}]], "Input",
  CellChangeTimes->{{3.670650665554462*^9, 3.6706506660102797`*^9}, {
-  3.6706513855571537`*^9, 3.6706513857634*^9}}]
+  3.6706513855571537`*^9, 3.6706513857634*^9}, {3.670805711605267*^9, 
+  3.670805711787799*^9}, {3.6708058878097277`*^9, 3.6708058880708637`*^9}, {
+  3.6708060061874437`*^9, 3.6708060108111153`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"reset", "[", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.670806000838937*^9, 3.670806018244046*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"heights", "[", "grid_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"i", ",", "j", ",", 
+      RowBox[{"heights", "=", "grid"}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", 
+        RowBox[{"gridsize", "-", "1"}]}], ",", 
+       RowBox[{"i", ">", "0"}], ",", 
+       RowBox[{"i", "--"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"For", "[", 
+         RowBox[{
+          RowBox[{"j", "=", 
+           RowBox[{"gridsize", "-", "1"}]}], ",", 
+          RowBox[{"j", ">", "0"}], ",", 
+          RowBox[{"j", "--"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"heights", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "j"}], "]"}], "]"}], "=", 
+            RowBox[{"0.5", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"grid", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "j"}], "]"}], "]"}], "+", 
+               RowBox[{"heights", "[", 
+                RowBox[{"[", 
+                 RowBox[{
+                  RowBox[{"i", "+", "1"}], ",", "j"}], "]"}], "]"}], "+", 
+               RowBox[{"heights", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"j", "+", "1"}]}], "]"}], "]"}]}], ")"}]}]}], 
+           ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", "heights"}]}],
+    "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.670805607816135*^9, 3.6708057005563707`*^9}, {
+  3.6708057595955963`*^9, 3.6708057611301517`*^9}, {3.67080579488354*^9, 
+  3.670805814315743*^9}, {3.670806930068492*^9, 3.670806931786867*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -578,6 +645,7 @@ Cell[BoxData[
        RowBox[{"s", "=", "0"}], ",", 
        RowBox[{"T", "=", "0"}], ",", 
        RowBox[{"stable", "=", "False"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     
      RowBox[{
       RowBox[{"While", " ", "[", 
        RowBox[{
@@ -695,6 +763,7 @@ Cell[BoxData[
   RowBox[{
    RowBox[{"pourSand", "[", 
     RowBox[{"totalSand_", ",", " ", 
+     RowBox[{"random_:", "False"}], ",", 
      RowBox[{"place_:", 
       RowBox[{"{", 
        RowBox[{"{", 
@@ -702,8 +771,8 @@ Cell[BoxData[
          RowBox[{"IntegerPart", "[", 
           RowBox[{"gridsize", "/", "2"}], "]"}], ",", " ", 
          RowBox[{"IntegerPart", "[", 
-          RowBox[{"gridsize", "/", "2"}], "]"}]}], "}"}], "}"}]}], ",", " ", 
-     RowBox[{"random_:", "False"}]}], "]"}], " ", ":=", " ", 
+          RowBox[{"gridsize", "/", "2"}], "]"}]}], "}"}], "}"}]}]}], "]"}], 
+   " ", ":=", " ", 
    RowBox[{"Module", "[", 
     RowBox[{
      RowBox[{"{", 
@@ -711,6 +780,8 @@ Cell[BoxData[
        RowBox[{"sList", "=", 
         RowBox[{"{", "}"}]}], ",", 
        RowBox[{"TList", "=", 
+        RowBox[{"{", "}"}]}], ",", 
+       RowBox[{"grids", "=", 
         RowBox[{"{", "}"}]}]}], "}"}], ",", "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"For", "[", 
@@ -726,14 +797,17 @@ Cell[BoxData[
           RowBox[{"{", 
            RowBox[{"s", ",", "T"}], "}"}], "=", 
           RowBox[{"relaxation", "[", "]"}]}], ";", "\[IndentingNewLine]", 
-         RowBox[{"AppendTo", "[", 
-          RowBox[{"sList", ",", "s"}], "]"}], ";", 
+         RowBox[{
+          RowBox[{"AppendTo", "[", 
+           RowBox[{"grids", ",", "grid"}], "]"}], 
+          RowBox[{"AppendTo", "[", 
+           RowBox[{"sList", ",", "s"}], "]"}]}], ";", 
          RowBox[{"AppendTo", "[", 
           RowBox[{"TList", ",", "T"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
        "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"{", 
-       RowBox[{"sList", ",", "TList"}], "}"}]}]}], "\[IndentingNewLine]", 
-    "]"}]}], "\[IndentingNewLine]"}]], "Input",
+       RowBox[{"grids", ",", "sList", ",", "TList"}], "}"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}]], "Input",
  CellChangeTimes->{{3.6702861272240305`*^9, 3.670286131658803*^9}, {
    3.6702862922282906`*^9, 3.6702862924211874`*^9}, {3.6702867480730295`*^9, 
    3.6702867481354823`*^9}, {3.670286903490368*^9, 3.6702869075234847`*^9}, {
@@ -741,7 +815,9 @@ Cell[BoxData[
    3.670651207566972*^9, 3.6706513038541613`*^9}, {3.670651403740975*^9, 
    3.6706514242111197`*^9}, {3.6706515435210543`*^9, 3.670651546063765*^9}, {
    3.670651655268001*^9, 3.670651663248413*^9}, {3.670651779708129*^9, 
-   3.670651803193137*^9}, {3.670689347055499*^9, 3.67068936677769*^9}}]
+   3.670651803193137*^9}, {3.670689347055499*^9, 3.67068936677769*^9}, {
+   3.670805972456517*^9, 3.670805978357823*^9}, {3.670806651636063*^9, 
+   3.6708066674101458`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -824,15 +900,17 @@ Cell["Run and Plot the Simulation", "Subsubsection",
 
 Cell[BoxData[
  RowBox[{
+  RowBox[{"reset", "[", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6708059902360983`*^9, 3.670805991940957*^9}, {
+  3.670806029348736*^9, 3.6708060329078836`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
   RowBox[{
    RowBox[{"{", 
-    RowBox[{"sList", ",", "TList"}], "}"}], "=", 
+    RowBox[{"grids", ",", "sList", ",", "TList"}], "}"}], "=", 
    RowBox[{"pourSand", "[", 
-    RowBox[{"1000", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"{", 
-       RowBox[{"20", ",", "20"}], "}"}], "}"}], ",", " ", "False"}], "]"}]}], 
-  ";", " ", 
+    RowBox[{"1000", ",", " ", "True"}], "]"}]}], ";", " ", 
   RowBox[{"(*", 
    RowBox[{
    "Set", " ", "3", " ", "parameter", " ", "to", " ", "true", " ", "if", " ", 
@@ -851,39 +929,115 @@ Cell[BoxData[
    3.670689076704313*^9, 3.6706890769516*^9}, {3.6706893755659475`*^9, 
    3.670689410709156*^9}, {3.6706895740500154`*^9, 3.670689603231742*^9}, {
    3.6706896511583023`*^9, 3.6706896741461716`*^9}, {3.6706897378525543`*^9, 
-   3.670689751731151*^9}, {3.6706905843885856`*^9, 3.6706905853791256`*^9}}],
+   3.670689751731151*^9}, {3.6706905843885856`*^9, 3.6706905853791256`*^9}, 
+   3.670805894016836*^9, {3.670805958166151*^9, 3.670805985926292*^9}, {
+   3.6708060950193243`*^9, 3.67080609533698*^9}, 3.670806250902162*^9, {
+   3.67080667164476*^9, 3.670806672082673*^9}, {3.6708067861522007`*^9, 
+   3.670806786454555*^9}, {3.670806947555683*^9, 3.670806950914152*^9}, 
+   3.670806992136415*^9}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Dynamic", "[", 
-  RowBox[{"ArrayPlot", "[", 
-   RowBox[{"grid", ",", 
-    RowBox[{"PlotLegends", "\[Rule]", "Automatic"}]}], "]"}], "]"}]], "Input",
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"grids", "[", 
+     RowBox[{"[", "t", "]"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "1", ",", 
+     RowBox[{"Length", "[", "grids", "]"}], ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.670806738758477*^9, 3.6708067961740417`*^9}, {
+  3.670806898887251*^9, 3.670806904987431*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`t$$ = 166, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`t$$], 1, 1000, 1}}, Typeset`size$$ = {
+      360., {177., 182.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`t$246215$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, "Variables" :> {$CellContext`t$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`t$$, $CellContext`t$246215$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+          Part[$CellContext`grids, $CellContext`t$$]], 
+        "Specifications" :> {{$CellContext`t$$, 1, 1000, 1, Appearance -> 
+           "Labeled", 
+           AppearanceElements -> {
+            "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+             "DirectionButton"}}}, 
+        "Options" :> {
+         ControlType -> Animator, AppearanceElements -> None, 
+          DefaultBaseStyle -> "Animate", DefaultLabelStyle -> "AnimateLabel", 
+          SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{405., {214., 221.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Animate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.670807039287662*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"heights", "[", 
+     RowBox[{"grids", "[", 
+      RowBox[{"[", "t", "]"}], "]"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "1", ",", 
+     RowBox[{"Length", "[", "grids", "]"}], ",", "1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Dynamic", "[", 
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"grid", ",", 
+     RowBox[{"PlotLegends", "\[Rule]", "Automatic"}]}], "]"}], "]"}], 
+  "*)"}]], "Input",
  CellChangeTimes->{{3.6702869552154093`*^9, 3.6702869604373145`*^9}, {
    3.6702870040789757`*^9, 3.6702870116285143`*^9}, {3.67028717519384*^9, 
    3.6702871763940783`*^9}, {3.6702872638648043`*^9, 3.6702872671292067`*^9}, 
    3.670287311325121*^9, {3.6702885120817785`*^9, 3.6702885317573233`*^9}, {
    3.6702893925070853`*^9, 3.670289394048932*^9}, {3.6702895082756205`*^9, 
    3.6702895115984626`*^9}, {3.670646565346911*^9, 3.670646565585709*^9}, {
-   3.670646616555067*^9, 3.670646634312932*^9}}],
+   3.670646616555067*^9, 3.670646634312932*^9}, {3.6708059540151587`*^9, 
+   3.670805954872246*^9}, {3.670806237583953*^9, 3.670806239852871*^9}}],
 
 Cell[BoxData[
- DynamicBox[ToBoxes[
-   ArrayPlot[$CellContext`grid, PlotLegends -> Automatic], StandardForm],
-  ImageSizeCache->{403., {177., 182.}}]], "Output",
- CellChangeTimes->{{3.670286962639374*^9, 3.670286973364368*^9}, {
-   3.6702870086453114`*^9, 3.6702870201211863`*^9}, 3.67028705946395*^9, 
-   3.6702871177784605`*^9, 3.670287177078822*^9, 3.67028727199193*^9, {
-   3.6702873040233917`*^9, 3.6702873119885807`*^9}, {3.670288492717962*^9, 
-   3.67028853243419*^9}, 3.6702893946080303`*^9, 3.670289430626382*^9, {
-   3.670289518012782*^9, 3.670289523355397*^9}, 3.6705311300547132`*^9, 
-   3.6706148939642267`*^9, {3.6706464385682993`*^9, 3.6706464491461077`*^9}, 
-   3.670646566007719*^9, {3.6706466302716923`*^9, 3.6706466453193073`*^9}, {
-   3.670649813976523*^9, 3.670649835010573*^9}, 3.67065024770802*^9, 
-   3.670650615622319*^9, 3.670650660885725*^9, 3.670651389991529*^9, 
-   3.670651458905428*^9, {3.6706893843271084`*^9, 3.670689396090494*^9}}]
-}, Open  ]],
+ RowBox[{"(*", 
+  RowBox[{"Dynamic", "[", 
+   RowBox[{"ListPlot3D", "[", 
+    RowBox[{
+     RowBox[{"heights", "[", "]"}], ",", 
+     RowBox[{"InterpolationOrder", "\[Rule]", "0"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", "\"\<SouthwestColors\>\""}]}], "]"}],
+    "]"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.670806733631798*^9, 3.670806735967567*^9}}],
 
 Cell[CellGroupData[{
 
@@ -940,9 +1094,10 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1440, 874},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (February 25, 2016)",
+WindowSize->{720, 874},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 9, \
+2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -956,64 +1111,72 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 70, 1, 46, "Input"],
 Cell[CellGroupData[{
-Cell[580, 22, 203, 3, 101, "Title"],
-Cell[786, 27, 243, 4, 35, "Text"],
+Cell[653, 25, 203, 3, 92, "Title"],
+Cell[859, 30, 243, 4, 35, "Text"],
 Cell[CellGroupData[{
-Cell[1054, 35, 146, 2, 70, "Section"],
-Cell[1203, 39, 99, 1, 30, "Text"]
+Cell[1127, 38, 146, 2, 64, "Section"],
+Cell[1276, 42, 99, 1, 30, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1339, 45, 197, 3, 70, "Section"],
-Cell[1539, 50, 1305, 32, 72, "Input",
+Cell[1412, 48, 197, 3, 64, "Section"],
+Cell[1612, 53, 1305, 32, 131, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2881, 87, 94, 1, 70, "Section"],
-Cell[2978, 90, 1319, 20, 52, "Input"],
-Cell[4300, 112, 513, 14, 52, "Input"],
-Cell[4816, 128, 1371, 32, 112, "Input"],
-Cell[6190, 162, 3270, 79, 272, "Input"],
-Cell[9463, 243, 1272, 27, 172, "Input"],
+Cell[2954, 90, 94, 1, 64, "Section"],
+Cell[3051, 93, 1319, 20, 46, "Input"],
+Cell[4373, 115, 513, 14, 46, "Input"],
+Cell[4889, 131, 1371, 32, 97, "Input"],
+Cell[6263, 165, 3270, 79, 267, "Input"],
+Cell[9536, 246, 1298, 28, 148, "Input"],
 Cell[CellGroupData[{
-Cell[10760, 274, 3240, 69, 132, "Input"],
-Cell[14003, 345, 3519, 69, 526, "Output"]
+Cell[10859, 278, 3240, 69, 114, "Input"],
+Cell[14102, 349, 3539, 69, 516, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17571, 420, 94, 1, 70, "Section"],
+Cell[17690, 424, 94, 1, 64, "Section"],
 Cell[CellGroupData[{
-Cell[17690, 425, 167, 2, 41, "Subsubsection"],
-Cell[17860, 429, 167, 3, 31, "Input"],
-Cell[18030, 434, 3382, 74, 292, "Input"],
-Cell[21415, 510, 739, 22, 92, "Input"],
-Cell[22157, 534, 92, 1, 31, "Input"]
+Cell[17809, 429, 167, 2, 36, "Subsubsection"],
+Cell[17979, 433, 167, 3, 28, "Input"],
+Cell[18149, 438, 3392, 75, 250, "Input"],
+Cell[21544, 515, 739, 22, 80, "Input"],
+Cell[22286, 539, 92, 1, 28, "Input"],
+Cell[22381, 542, 143, 2, 28, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22286, 540, 103, 1, 39, "Subsubsection"],
-Cell[22392, 543, 461, 12, 88, "Input"]
+Cell[22561, 549, 103, 1, 35, "Subsubsection"],
+Cell[22667, 552, 677, 17, 28, "Input"],
+Cell[23347, 571, 137, 3, 28, "Input"],
+Cell[23487, 576, 1826, 46, 148, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22890, 560, 135, 1, 41, "Subsubsection"],
-Cell[23028, 563, 225, 4, 30, "Text"],
-Cell[23256, 569, 5788, 121, 452, "Input"],
-Cell[29047, 692, 2238, 51, 192, "Input"]
+Cell[25350, 627, 135, 1, 36, "Subsubsection"],
+Cell[25488, 630, 225, 4, 30, "Text"],
+Cell[25716, 636, 5794, 122, 387, "Input"],
+Cell[31513, 760, 2528, 59, 165, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31322, 748, 110, 1, 39, "Subsubsection"],
-Cell[31435, 751, 106, 1, 30, "Text"],
-Cell[31544, 754, 2460, 62, 272, "Input"]
+Cell[34078, 824, 110, 1, 35, "Subsubsection"],
+Cell[34191, 827, 106, 1, 30, "Text"],
+Cell[34300, 830, 2460, 62, 233, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34041, 821, 119, 1, 39, "Subsubsection"],
-Cell[34163, 824, 1587, 29, 31, "Input"],
+Cell[36797, 897, 119, 1, 35, "Subsubsection"],
+Cell[36919, 900, 190, 4, 28, "Input"],
+Cell[37112, 906, 1817, 30, 63, "Input"],
 Cell[CellGroupData[{
-Cell[35775, 857, 675, 11, 31, "Input"],
-Cell[36453, 870, 964, 14, 376, "Output"]
+Cell[38954, 940, 474, 12, 46, "Input"],
+Cell[39431, 954, 2120, 44, 452, "Output"]
 }, Open  ]],
+Cell[41566, 1001, 395, 11, 46, "Input"],
+Cell[41964, 1014, 804, 14, 28, "Input"],
+Cell[42771, 1030, 375, 9, 46, "Input"],
 Cell[CellGroupData[{
-Cell[37454, 889, 306, 7, 31, "Input"],
-Cell[37763, 898, 1566, 38, 289, "Output"]
+Cell[43171, 1043, 306, 7, 28, "Input"],
+Cell[43480, 1052, 1566, 38, 258, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
